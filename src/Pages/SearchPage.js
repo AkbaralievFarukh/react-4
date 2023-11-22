@@ -20,7 +20,7 @@ const SearchPage = () => {
             <Header />
             <div className={"container"}>
                 <h2 className={"text-center mt-3 mb-3"}>Search</h2>
-                <div className={"d-flex justify-content-center align-items-center gap-2"}>
+                <div className={"d-flex justify-content-center align-items-center gap-2 mb-3"}>
                     <input type="text" className={"p-1"} onChange={handleGetValue}/>
                     <button className={"btn btn-danger"} onClick={searchMealsByName}>Search</button>
                 </div>

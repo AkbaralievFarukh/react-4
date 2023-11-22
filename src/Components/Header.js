@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
-        <header className={"pt-4 pb-4"}>
+        <header className={"pt-4 pb-4 bg-dark"}>
             {/*<a href={"/"}>Header</a>*/}
             {/*<a href={"/search"}>Search</a>*/}
             <div className={"d-flex justify-content-between container"}>
