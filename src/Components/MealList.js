@@ -1,7 +1,7 @@
 import React from 'react';
 import MealCard from "./MealCard";
 
-const MealList = ({meals}) => {
+const MealList = ({meals, value}) => {
     return (
         <div className={"row"}>
             {
