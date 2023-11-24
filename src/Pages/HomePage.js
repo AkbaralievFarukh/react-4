@@ -1,23 +1,29 @@
-import React, {useEffect, useState} from 'react';
-import Header from "../Components/Header";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import MealList from "../Components/MealList";
 
-const HomePage = () => {
+const HomePages = () => {
     const [meals, setMeals] = useState([])
+
     useEffect(() => {
         axios('https://www.themealdb.com/api/json/v2/1/randomselection.php')
-            .then(({data}) => setMeals(data.meals))
-    }, [])
+            .then(({ data }) => setMeals(data.meals))
+    }, []);
+
     return (
-        <>
-            <Header />
-            <div className={"container"}>
-                <h2 className={"text-center mb-4 mt-4"}>Home Page</h2>
-                <MealList meals={meals} />
-            </div>
-        </>
+        <main>
+            <section className={'imgSection'}>
+                <div className={'text-center pt-4 pb-4'}>
+                    <h1>Home page</h1>
+                </div>
+            </section>
+            <section className={'mainPage'}>
+                <div className={'container'}>
+                    <MealList meals={meals}/>
+                </div>
+            </section>
+        </main>
     )
 }
 
-export default HomePage
+export default HomePages

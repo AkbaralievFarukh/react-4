@@ -1,23 +1,14 @@
-import React from 'react';
+import React from "react";
 import MealCard from "./MealCard";
 
-const MealList = ({meals, value}) => {
-    if (!meals) {
-        return (
-            <div className={"d-flex justify-content-center mt-5"}>
-                <h2 className={"bg-dark text-white p-2"}>Ничего не найдено</h2>;
-            </div>
-        )
-    }
 
+const MealList = ({meals}) => {
     return (
-        <div className={"row"}>
+        <div className={'row'}>
             {
                 meals.map(meal =>
-                    <div key={meal.idMeal}
-                    className={"col-4"}
-                    >
-                        <MealCard meal={meal} />
+                    <div key={meal.idMeal} className={'col-4'}>
+                        <MealCard meal={meal}/>
                     </div>
                 )
             }

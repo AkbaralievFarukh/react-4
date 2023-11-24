@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
+import {Link} from "react-router-dom";
 
 const MealCard = ({meal}) => {
+
     return (
-        <div className={"box"}>
-            <img className={"rounded"} src={meal.strMealThumb} alt=""/>
-            <h5>{meal.strMeal}</h5>
-            <p>{meal.strCategory}</p>
+        <div className={'box'}>
+            <img src={meal?.strMealThumb} alt=""/>
+            <div className={'mealTitle'}>
+                <h4>
+                    <Link to={`/meal/${meal?.idMeal}`} className={'text-decoration-none text-dark'}>
+                        {meal?.strMeal}
+                    </Link>
+                </h4>
+                <p>{meal?.strCategory}</p>
+            </div>
         </div>
     )
 }
